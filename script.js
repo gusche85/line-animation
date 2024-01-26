@@ -47,7 +47,7 @@ const lineCoordinates = [
   { startX: 616, startY: 433, endX: 616, endY: 350 }, //7
   { startX: 616, startY: 350, endX: 670, endY: 304 },
 
-  { startX: 718, startY: 433, endX: 718, endY: 360},
+  { startX: 718, startY: 433, endX: 718, endY: 360}, //6
   { startX: 718, startY: 360, endX: 718, endY: 300 },
 ];
 
@@ -84,13 +84,11 @@ function drawLines() {
 }
 
 let tValues = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // One per dot
-//let speed = 0.005; // The speed of the dots
 
 function animateDot() {
-    //context.clearRect(0, 0, canvas.width, canvas.height);
-    drawLines(); // Assume this function draws static lines and it's already defined
+   
+    drawLines(); 
 
-    // Animate each dot from the end of the second line to the start of the first line
     for (let i = 0; i < lineCoordinates.length; i += 2) {
         const line1 = lineCoordinates[i];
         const line2 = lineCoordinates[i + 1];
@@ -98,13 +96,12 @@ function animateDot() {
         let dotPosition;
 
         if (tValues[tIndex] < 1) {
-            // Move along the first line
+            
             dotPosition = {
                 x: line1.endX - tValues[tIndex] * (line1.endX - line1.startX),
                 y: line1.endY - tValues[tIndex] * (line1.endY - line1.startY)
             };
         } else {
-            // Move along the second line (subtracting as we are moving in the opposite direction)
             const t = tValues[tIndex] - 1;
             dotPosition = {
                 x: line2.endX + t * (line2.startX - line2.endX),
@@ -113,8 +110,6 @@ function animateDot() {
         }
 
         tValues[tIndex] += speed;
-
-        // Reset t and switch to the next line segment pair once the dot reaches the end of the second line
         if (tValues[tIndex] >= 2) {
             tValues[tIndex] = 0;
         }

@@ -47,8 +47,8 @@ const lineCoordinates = [
   { startX: 616, startY: 433, endX: 616, endY: 350 }, //7
   { startX: 616, startY: 350, endX: 670, endY: 304 },
 
-  { startX: 718, startY: 433, endX: 718, endY: 300 },
-  { startX: 718, startY: 300, endX: 718, endY: 300 },
+  { startX: 718, startY: 433, endX: 718, endY: 360},
+  { startX: 718, startY: 360, endX: 718, endY: 300 },
 ];
 
 let dots = lineCoordinates.map(line => ({

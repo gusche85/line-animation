@@ -11,17 +11,44 @@ window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
 const lineCoordinates = [
-    { startX: 97, startY: 433, endX: 97, endY: 197 },
+    { startX: 97, startY: 433, endX: 97, endY: 197 }, //1
     { startX: 97, startY: 197, endX: 600, endY: 197 },
 
-    { startX: 203, startY: 433, endX: 203, endY: 210 },
+    { startX: 203, startY: 433, endX: 203, endY: 210 }, //2
     { startX: 203, startY: 210, endX: 600, endY: 210 },
 
-    { startX: 306, startY: 433, endX: 306, endY: 225 },
+    { startX: 306, startY: 433, endX: 306, endY: 225 }, //3
     { startX: 306, startY: 225, endX: 600, endY: 225 },
 
-    { startX: 409, startY: 433, endX: 409, endY: 240 },
+    { startX: 409, startY: 433, endX: 409, endY: 240 }, //4
     { startX: 409, startY: 240, endX: 600, endY: 240 },
+
+    { startX: 510, startY: 433, endX: 510, endY: 255 }, //5
+    { startX: 510, startY: 255, endX: 600, endY: 255 },
+
+    { startX: 1332, startY: 433, endX: 1332, endY: 197 }, //13
+    { startX: 1332, startY: 197, endX: 840, endY: 197 },
+
+    { startX: 1227, startY: 433, endX: 1227, endY: 210 }, //12
+    { startX: 1227, startY: 210, endX: 840, endY: 210 },
+
+  { startX: 1125, startY: 433, endX: 1125, endY: 225 }, //11
+  { startX: 1125, startY: 225, endX: 840, endY: 225 },
+
+  { startX: 1024, startY: 433, endX: 1024, endY: 240 }, //10
+  { startX: 1024, startY: 240, endX: 840, endY: 240 },
+
+  { startX: 920, startY: 433, endX: 920, endY: 255 }, //9
+  { startX: 920, startY: 255, endX: 840, endY: 255 },
+
+  { startX: 820, startY: 433, endX: 820, endY: 350 }, //8
+  { startX: 820, startY: 350, endX: 770, endY: 304 },
+
+  { startX: 616, startY: 433, endX: 616, endY: 350 }, //7
+  { startX: 616, startY: 350, endX: 670, endY: 304 },
+
+  { startX: 718, startY: 433, endX: 718, endY: 300 },
+  { startX: 718, startY: 300, endX: 718, endY: 300 },
 ];
 
 let dots = lineCoordinates.map(line => ({
@@ -56,7 +83,7 @@ function drawLines() {
     });
 }
 
-let tValues = [0, 0, 0, 0]; // One per dot
+let tValues = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // One per dot
 //let speed = 0.005; // The speed of the dots
 
 function animateDot() {

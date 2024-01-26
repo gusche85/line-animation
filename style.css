@@ -23,11 +23,10 @@ height: 150px;
    font-size: 24px;
   width: 200px;
   background: 
-    linear-gradient(black 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(black 0 0) padding-box, 
     linear-gradient(to bottom,orange, black) border-box;
   color: #ffffff;
   padding: 15px;
- 
   border: 2px solid transparent;
   border-radius: 25px;
   display: inline-block;
@@ -35,8 +34,8 @@ height: 150px;
   padding: 20px;
   padding-bottom: 25px;
   -webkit-box-shadow: 0 0px 70px rgba(255, 201, 34, 0.2);
-  /* box-shadow: 50 30px 30px rgba(255, 201, 34, 0.75);*/
 }
+
 .box2 {
   align-items: center;
   text-align: center;
@@ -49,9 +48,11 @@ height: 150px;
   display: flex; /* Use Flexbox */
   
 }
+
 .box2 img {
   margin-right: 25px; /* Adjust the margin as needed */
 }
+
 .box3 {
   border-radius: 50px;
   height: 70px;
@@ -80,6 +81,7 @@ hr {
 #text {
   font-size: 11px;
 }
+
 .container {
   display: flex;
   justify-content: space-around;
@@ -132,11 +134,11 @@ span {
   font-size: 20px;
   letter-spacing: 3px;
   cursor: pointer;
-  display: flex; /* Use Flexbox */
-
+  display: flex; 
 }
+
 .button img {
   height: 30px;
-  margin-right: 20px; /* Adjust the margin as needed */
+  margin-right: 20px; 
 }
 

@@ -9,6 +9,14 @@ body {
   padding-top: 20px;
 }
 
+canvas {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
 .custom-box {
 height: 150px;
   text-align: left;
@@ -131,3 +139,4 @@ span {
   height: 30px;
   margin-right: 20px; /* Adjust the margin as needed */
 }
+
